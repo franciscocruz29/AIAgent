@@ -3,9 +3,10 @@ import os
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
-from prompts import system_prompt
-from call_function import available_functions, call_function
+
+from call_function import call_function, available_functions
 from config import MAX_ITERS
+from prompts import system_prompt
 
 def generate_content(client, messages, verbose):
     response = client.models.generate_content(
